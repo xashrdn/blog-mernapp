@@ -2,8 +2,8 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="flex justify-center items-center">
-      💜 2023 Created By Khash-Erdene{" "}
+    <div className="flex justify-center items-center h-[5vh]">
+      <p className="text-white">💜 2023 Created By Khash-Erdene </p>
       <div className="flex justify-evenly w-[4vw]">
         <a href="https://www.facebook.com/khasherdenexash" target="_blank">
           <svg

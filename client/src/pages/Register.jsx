@@ -11,7 +11,7 @@ const Register = () => {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
 
-  const create = async () => {
+  const register = async () => {
     const result = await axios.post("http://localhost:8000/auth/register", {
       firstName: firstName,
       lastName: lastName,
@@ -108,7 +108,7 @@ const Register = () => {
             <div className="flex items-center mt-4">
               <button
                 type="submit"
-                onClick={create}
+                onClick={register}
                 className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-[black] rounded-md hover:bg-purple-700 focus:outline-none focus:bg-gray-600"
               >
                 Register

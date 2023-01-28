@@ -5,12 +5,14 @@ const dotenv = require("dotenv").config();
 const PORT = process.env.PORT || 7000;
 const MONGO_URI = process.env.MONGO_URI || "";
 const authRoutes = require("./routers/auth");
+const blogRoutes = require("./routers/blog");
 const app = express();
 
 app.use(cors());
 app.use(express.json());
 
 app.use(authRoutes);
+app.use(blogRoutes);
 
 // CONNECT
 

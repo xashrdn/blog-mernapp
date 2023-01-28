@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import { User } from "./UserContext";
 import { logo } from "../assets";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const { isLogged } = useContext(User);
@@ -33,6 +34,15 @@ const Navbar = () => {
         <div className="relative flex flex-col justify-center  overflow-hidden"></div>
         {isLogged ? (
           <div>
+            <Link to="/newsfeed">
+              <button
+                type="button"
+                className="mr-5 w-[10vw] inline-block px-6 py-2.5 bg-gray-600 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-white hover:shadow-lg hover:text-black focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-900 active:shadow-lg transition duration-150 ease-in-out"
+              >
+                NEWS FEED
+              </button>
+            </Link>
+
             <div className="inline-flex bg-white border rounded-md">
               <div className="px-4 py-2 text-sm text-gray-600 hover:text-gray-700 hover:bg-gray-50 rounded-l-md">
                 {localStorage.getItem("name")}

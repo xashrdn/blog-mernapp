@@ -1,33 +1,34 @@
 const mongoose = require("mongoose");
 
-const UserSchema = new mongoose.Schema(
+const BlogSchema = new mongoose.Schema(
   {
-    firstName: {
+    publisher: {
       type: String,
       required: true,
       minlength: 2,
       maxlenth: 50,
     },
-    lastName: {
+    title: {
       type: String,
       required: true,
       minlength: 2,
-      maxlenth: 50,
+      maxlenth: 20,
     },
-    email: {
+    paragraph: {
       type: String,
       required: true,
-      maxlength: 50,
+      minlength: 200,
+      maxlenth: 600,
       unique: true,
     },
-    password: {
+    image: {
       type: String,
       required: true,
-      minlength: 5,
+      min: 5,
     },
   },
   { timestamps: true }
 );
 
-const User = mongoose.model("User", UserSchema);
-module.exports = User;
+const Blog = mongoose.model("Blog", BlogSchema);
+module.exports = Blog;
