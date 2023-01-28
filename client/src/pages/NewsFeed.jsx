@@ -8,7 +8,7 @@ const NewsFeed = () => {
   const navigate = useNavigate();
   const [feeds, setFeeds] = useState([]);
   const getFeed = async () => {
-    const result = await axios.get("https//xashblog.vercel.app/blogs");
+    const result = await axios.get("http://localhost:8000/blogs");
     setFeeds(result?.data);
   };
   getFeed();

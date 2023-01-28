@@ -7,7 +7,7 @@ const Login = () => {
   const [password, setPassword] = useState();
 
   const create = async () => {
-    const result = await axios.post("https://xashblog.vercel.app/auth/login", {
+    const result = await axios.post("http://localhost:8000/auth/login", {
       email: email,
       password: password,
     });

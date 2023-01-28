@@ -12,7 +12,7 @@ const CreateBlog = () => {
   const [image, setImage] = useState();
 
   const publish = async () => {
-    const result = await axios.post("https://xashblog.vercel.app/blog", {
+    const result = await axios.post("http://localhost:8000/blog", {
       publisher: localStorage.getItem("name"),
       title: title,
       paragraph: paragraph,
