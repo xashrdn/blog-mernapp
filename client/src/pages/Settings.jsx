@@ -6,7 +6,7 @@ import axios from "axios";
 const Settings = () => {
   const deleteAll = () => {
     axios.delete(
-      `http://localhost:8000/blogs/${localStorage.getItem("userId")}`
+      `https://xashblog.vercel.app/blogs/${localStorage.getItem("userId")}`
     );
     alert("successfully deleted");
   };

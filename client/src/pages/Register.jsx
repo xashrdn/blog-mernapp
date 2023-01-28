@@ -12,12 +12,15 @@ const Register = () => {
   const [password, setPassword] = useState();
 
   const register = async () => {
-    const result = await axios.post("http://localhost:8000/auth/register", {
-      firstName: firstName,
-      lastName: lastName,
-      email: email,
-      password: password,
-    });
+    const result = await axios.post(
+      "https://xashblog.vercel.app/auth/register",
+      {
+        firstName: firstName,
+        lastName: lastName,
+        email: email,
+        password: password,
+      }
+    );
     if (result.status == 201) {
       navigate("/login");
       alert("Successfully registered :)");

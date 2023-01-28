@@ -10,7 +10,7 @@ const MyBlogs = () => {
   const [myBlog, setMyBlog] = useState([]);
   const getMyBlog = async () => {
     const result = await axios.get(
-      `http://localhost:8000/blog/${localStorage.getItem("userId")}`
+      `https://xashblog.vercel.app/blog/${localStorage.getItem("userId")}`
     );
     setMyBlog(result?.data);
   };
