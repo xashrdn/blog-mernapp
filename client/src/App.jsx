@@ -13,7 +13,7 @@ import UserProvider from "./components/UserContext";
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/">
       <UserProvider>
         <Routes>
           <Route path="/" element={<Home />} />
