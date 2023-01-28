@@ -1,10 +1,8 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { logo } from "../assets";
 
 const Login = () => {
-  const navigate = useNavigate();
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
 
@@ -13,12 +11,14 @@ const Login = () => {
       email: email,
       password: password,
     });
+    console.log(result);
     const nameSaver = `${result?.data?.user?.firstName} ${result?.data?.user?.lastName}`;
 
     localStorage.setItem("token", result?.data?.token);
+    localStorage.setItem("userId", result?.data?.user?._id);
     localStorage.setItem("name", nameSaver);
     if (result.status == 200) {
-      navigate("/");
+      window.location = "/";
       alert("Success!");
     }
     console.log(result);

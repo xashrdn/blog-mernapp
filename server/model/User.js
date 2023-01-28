@@ -25,6 +25,10 @@ const UserSchema = new mongoose.Schema(
       required: true,
       minlength: 5,
     },
+    admin: {
+      type: Boolean,
+      default: false,
+    },
   },
   { timestamps: true }
 );

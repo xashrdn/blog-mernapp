@@ -6,7 +6,7 @@ const BlogSchema = new mongoose.Schema(
       type: String,
       required: true,
       minlength: 2,
-      maxlenth: 50,
+      maxlenth: 40,
     },
     title: {
       type: String,
@@ -24,7 +24,12 @@ const BlogSchema = new mongoose.Schema(
     image: {
       type: String,
       required: true,
-      min: 5,
+      min: 10,
+    },
+    userId: {
+      type: mongoose.Schema.ObjectId,
+      ref: "User",
+      require: true,
     },
   },
   { timestamps: true }

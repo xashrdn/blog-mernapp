@@ -73,18 +73,18 @@ const Navbar = () => {
                 {dropDownMenu ? (
                   <div className="absolute right-0 z-10 w-56 mt-4 origin-top-right bg-white border border-gray-100 rounded-md shadow-lg">
                     <div className="p-2">
-                      <a
-                        href="#"
+                      <Link
+                        to="/myblogs"
                         className="block px-4 py-2 text-sm text-gray-500 rounded-lg hover:bg-gray-50 hover:text-gray-700"
                       >
-                        My Blog
-                      </a>
-                      <a
-                        href="#"
+                        My Blogs
+                      </Link>
+                      <Link
+                        to="/settings"
                         className="block px-4 py-2 text-sm text-gray-500 rounded-lg hover:bg-gray-50 hover:text-gray-700"
                       >
                         Settings
-                      </a>
+                      </Link>
                       <a
                         onClick={logOut}
                         className="block px-4 py-2 text-sm text-gray-500 rounded-lg hover:bg-gray-50 hover:text-gray-700 cursor-pointer"

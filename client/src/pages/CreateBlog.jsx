@@ -17,10 +17,13 @@ const CreateBlog = () => {
       title: title,
       paragraph: paragraph,
       image: image,
+      userId: localStorage.getItem("userId"),
     });
     if (result.status == 201) {
       navigate("/");
       alert("Blog published successfully");
+    } else {
+      alert("Blog failed validation error");
     }
   };
 
@@ -45,7 +48,7 @@ const CreateBlog = () => {
             </label>
             <input
               onChange={(e) => setTitle(e.target.value)}
-              placeholder="News"
+              placeholder="News Min(2) Max(20) char"
               type="text"
               className="block w-full px-4 py-2 mt-2 text-black bg-white border rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40"
             />
@@ -56,7 +59,7 @@ const CreateBlog = () => {
             </label>
             <textarea
               onChange={(e) => setParagraph(e.target.value)}
-              placeholder="Information..."
+              placeholder="Information... Min(200) Max(600) char"
               className="block w-full px-4 py-2 mt-2 text-black bg-white border rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40 h-64"
               cols="30"
               rows="10"
