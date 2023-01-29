@@ -8,7 +8,9 @@ const authRoutes = require("./routers/auth");
 const blogRoutes = require("./routers/blog");
 const app = express();
 
-app.use(cors());
+app.use(
+  cors({ origin: ["http://localhost:3000", "https://xashblog.onrender.com/"] })
+);
 app.use(express.json());
 
 app.use(authRoutes);
