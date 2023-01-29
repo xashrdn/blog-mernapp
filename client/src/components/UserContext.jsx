@@ -10,7 +10,7 @@ const UserProvider = ({ children }) => {
   const userCheck = async () => {
     if (localStorage.getItem("token")) {
       setIsLogged(true);
-      navigate("/" || "/createblog" || "/newsfeed");
+      navigate("/" || "/createblog" || "/newsfeed" || "/myblogs");
     } else {
       navigate("/register" || "/login");
     }

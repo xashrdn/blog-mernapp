@@ -33,7 +33,7 @@ const MyBlogs = () => {
           return (
             <div
               key={key}
-              className="h-[60vh] w-[50vw] rounded-lg shadow-md 2xl:max-w-sm border-white border-2 p-1 mt-5"
+              className="h-[86vh] w-[90vw] rounded-lg shadow-md 2xl:max-w-sm border-white border-2 p-1 mt-5 sm:h-[70vh] sm:w-[60vw] md:w-[50vw]  md:h-[60vh]"
             >
               <img
                 className="object-cover w-full h-48"

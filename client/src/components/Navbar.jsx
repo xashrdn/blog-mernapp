@@ -20,34 +20,30 @@ const Navbar = () => {
   };
 
   return (
-    <div className="flex justify-between w-[100vw] h-[8vh] items-center">
-      <div className="py-4 px-12">
+    <div className="flex justify-evenly w-[100vw] h-[7vh] items-center sm:justify-between">
+      <div className="py-4 px-4 w-[32vw] sm:px-12">
         <img
           onClick={() => navigate("/")}
           src={logo}
           alt="logo"
-          width="70px"
-          className="cursor-pointer"
+          className=" w-[55px] h-[55px] object-contain cursor-pointer sm:w-[80px] sm:h-[50px]"
         />
       </div>
-      <div className="py-4 px-12  ">
-        <div className="relative flex flex-col justify-center  overflow-hidden"></div>
+      <div className="py-4 px-4  w-[68vw] flex justify-end sm:px-12">
         {isLogged ? (
-          <div>
+          <div className="flex items-center">
             <Link to="/newsfeed">
               <button
                 type="button"
-                className="mr-5 w-[10vw] inline-block px-6 py-2.5 bg-gray-600 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-white hover:shadow-lg hover:text-black focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-900 active:shadow-lg transition duration-150 ease-in-out"
+                className="text-center w-[26vw] mr-2 sm:w-[20vw] md:w-[16vw] lg:w-[12vw] inline-block px-6 py-2.5 bg-gray-600  text-white font-medium text-  leading-tight uppercase rounded-full shadow-md hover:bg-white hover:shadow-lg hover:text-black focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-900 active:shadow-lg transition duration-150 ease-in-out"
               >
-                NEWS FEED
+                BLOGS
               </button>
             </Link>
-
             <div className="inline-flex bg-white border rounded-md">
-              <div className="px-4 py-2 text-sm text-gray-600 hover:text-gray-700 hover:bg-gray-50 rounded-l-md">
+              <div className="w-[38vw]   px-4 py-2 text-sm text-gray-600 hover:text-gray-700 hover:bg-gray-50 rounded-l-md sm:w-[22vw] lg:w-[14vw]">
                 {localStorage.getItem("name")}
               </div>
-
               <div className="relative">
                 <button
                   onClick={profile}
