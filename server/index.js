@@ -9,7 +9,7 @@ const blogRoutes = require("./routers/blog");
 const app = express();
 
 app.use(
-  cors({ origin: ["http://localhost:3000", "https://xashblog.onrender.com/"] })
+  cors({ origin: ["http://localhost:5173", "https://xashblog.onrender.com/"] })
 );
 app.use(express.json());
 
